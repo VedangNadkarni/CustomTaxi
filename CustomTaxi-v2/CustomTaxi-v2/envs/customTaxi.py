@@ -38,7 +38,7 @@ def create_map(rows=5, cols=5, locs=4, cramped=0.2, locs_prob=3, no_walls=True):
         ro_str = "|"
         for co in range(cols):
             while 1:
-                a = np.random.choice(locs_set, size = 1, replace=False, p=p )[0]
+                a = np.random.choice(locs_set, size = 1, replace=False, p=p )[0] #change this to change the randomised method of placing drop-off/pickup locations on the map
                 if a not in dropoffs:
                     dropoffs.append(str(a)) if str(a) != ' ' else 1
                     dropoff_locs.append((ro,co)) if str(a) != ' ' else 1
